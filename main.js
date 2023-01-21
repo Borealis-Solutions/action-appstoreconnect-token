@@ -9,7 +9,7 @@ const scope = process.env.INPUT_SCOPE
 const now = Math.floor(Date.now() / 1000)
 
 let payload = { iss: issuerId, iat: now, aud: 'appstoreconnect-v1', exp: now + 20 * 60 }
-if (scope == '') {
+if (scope != '') {
     payload['scope'] = scope
 }
 const signedToken = jwt.sign(payload, key, { algorithm: 'ES256', keyid: keyId })
