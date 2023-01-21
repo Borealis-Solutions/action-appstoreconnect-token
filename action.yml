@@ -16,6 +16,8 @@ inputs:
   key:
     description: 'P8 private key. Can get from App Store Connect.'
     required: true
+  scope:
+    description: 'The scope to apply for example: GET /v1/apps/123'
 
 outputs:
   token:
